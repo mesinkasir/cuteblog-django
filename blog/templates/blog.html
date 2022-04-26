@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+{% for post in posts %}
+<div class="col-12 col-md-4 p-3">
+    <a href="{% url 'post' post.pk %}" class="card p-1">
+    <img class="card-img-top" alt="{{post.name}}" src="{{post.cover}}"/>
+    <div class="p-3 card-body">
+<h3><strong>{{post.name}} ✏️</strong></h3>
+<p class="date">👧 {{post.author}}</p>
+<p>📝 {{post.description}}</p>
+</div>
+</a></div>
+{% endfor %}
+</div>
+{% endblock %}

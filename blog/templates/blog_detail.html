@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{post.name}}</title>
+        <meta content='{{post.name}}' property='og:title'/>
+        <meta content="{{post.description}}" name="description"/>
+        <meta content='{{post.name}}' property='og:title'/>
+        <meta content='axcora' property='og:author'/>
+        <meta content='{{post.name}}' name='facebook:title'/>
+        <meta content='website' property='og:type'/>
+        <meta content='https://www.facebook.com/mesinkasircomplete' property='facebook:author'/>
+        <meta content='{{post.cover}}' name='facebook:image'/>
+        <meta content='{{post.name}}' property='og:site_name'/>
+        <meta content='{{post.description}}' property='facebook:description'/>
+        <meta content='summary_large_image' name='twitter:card'/>
+        <meta content='https://twitter.com/hockeycomp' property='twitter:author'/>
+        <meta content='@hockeycomp' name='twitter:site'/>
+        <meta content='{{post.cover}}' name='twitter:image'/>
+        <meta content='{{post.description}}' name='twitter:description'/>
+        <meta content='{{post.name}} ' name='twitter:title'/>
+        <meta content='{{post.name}}' name='keywords'/>
+        <meta content='index, follow' name='robots'/>
+        <link rel="icon" type="image/x-icon" href="{{post.cover}}" />
+        <meta content='index, follow' name='robots'/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://mesinkasir.github.io/cuteblog-jekyll/assets/css/style.css" rel="stylesheet"/>
+        </head>
+    <body>
+      <div class="container">
+        <nav class="navbar p-3">
+          <p><a class="nav-link" href="/">Home</a></p>
+          <!-- <a class="nav-link" href="https://axcora.my.id/pico/cuteblog/home/about">About Cute Blog 🥳 </a> -->
+          <a class="nav-link btn btn-dark text-white" href="https://github.com/mesinkasir/cuteblog-pico-webapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+          </svg> Github</a>
+          </nav>
+{% block content %}
+<div class="col-12 p-1">
+  <div class="card p-1">
+<img class="card-img-top" alt="{{post.name}}" src="{{post.cover}}"/>
+<div class="card-content p-3 p-md-5">
+<h1><a href="/">{{post.name}} ✏️</a></h1>
+<h3><strong>📝 {{post.description}}</strong></h3>
+<p class="date">👧 {{post.author}}</p>
+<p class="dotted"/>
+<p>{{post.body}}</p>
+</div>
+</div>
+</div>
+{% endblock %}
+</div>
+<footer class="mt-5">
+  <p class="col-12 p-1 text-center text-white"><small>themes by <a class="text-white" href="http://axcora.my.id/pico/cuteblog/">cuteblog</a> built with <a class="text-white" href="https://www.djangoproject.com/">Django</a> powered by <a class="text-white" href="https://website.axcora.com">axcora</a></small></p></footer>
+</body>
+</html>
